@@ -1,0 +1,29 @@
+/* Apply 'Mali' font as default */
+body {
+    font-family: 'Mali', sans-serif;
+    background-color: #f5f3ff; /* Lightest purple background (Tailwind's purple-50) */
+    color: #4c1d95; /* Deep purple text (Tailwind's violet-900) */
+}
+
+/* Custom Pastel Purple Colors (for reference if needed) */
+.bg-pastel-light { background-color: #f5f3ff; } /* bg-purple-50 */
+.bg-pastel-mid { background-color: #ede9fe; } /* bg-purple-100 */
+.bg-pastel-dark { background-color: #a78bfa; } /* bg-violet-400 */
+.text-pastel-dark { color: #5b21b6; } /* text-violet-800 */
+
+/* Animation: Fade in on scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom shadow for a softer look */
+.shadow-pastel {
+     box-shadow: 0 10px 15px -3px rgb(221 214 254 / 0.5), 0 4px 6px -4px rgb(221 214 254 / 0.5);
+}

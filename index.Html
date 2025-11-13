@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart ID tag - ติดตามสัตว์เลี้ยง</title>
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Load Google Fonts (Font 'Mali') -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Load Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-purple-50 text-violet-900">
+
+    <!-- 1. Header & Navigation (Banner) -->
+    <header class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo and Brand Name -->
+            <div class="flex items-center space-x-3">
+                <!-- Placeholder Logo -->
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center border-2 border-purple-200">
+                    <!-- Paw Icon (SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-purple-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 3.5a.75.75 0 01.75.75v2.536l.24.24a.75.75 0 010 1.06l-.24.24V10.5A4.5 4.5 0 006.5 6H3.75a.75.75 0 010-1.5H6.5A2.5 2.5 0 019 7.036V5.75a.75.75 0 01.75-.75h.5c.205 0 .396.082.53.22l.19.19.19-.19A.75.75 0 0110 3.5zM16.25 4.5h-2.5a.75.75 0 000 1.5h2.5a.75.75 0 000-1.5zM8.5 10.5a.75.75 0 01.75-.75H11A4.5 4.5 0 0115.5 14v2.75a.75.75 0 01-1.5 0V14a2.5 2.5 0 00-2.5-2.5H9.25a.75.75 0 01-.75-.75V10.5zM14 11.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z" />
+                        <path fill-rule="evenodd" d="M9.135 1.011a.75.75 0 01.13 0l5 1.25A.75.75 0 0115 3.019v4.47A5.5 5.5 0 0110.7 12.8L10 13l-.7-.2a5.5 5.5 0 01-4.3-5.31V3.02a.75.75 0 01.735-.758l5-1.25zM10 2.22L6.5 3.109v4.38A4 4 0 009.808 11.5L10 11.69l.192-.09a4 4 0 003.308-4.202V3.11L10 2.22z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <span class="text-3xl font-semibold text-purple-700">Smart ID tag</span>
+            </div>
+            
+            <!-- Menu (Desktop) -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="text-lg text-purple-700 hover:text-purple-500 transition duration-300">เกี่ยวกับเว็บ</a>
+                <a href="#video" class="text-lg text-purple-700 hover:text-purple-500 transition duration-300">ตัวอย่าง</a>
+                <a href="#qr" class="text-lg text-purple-700 hover:text-purple-500 transition duration-300">QR Code</a>
+                <a href="#footer" class="text-lg text-purple-700 hover:text-purple-500 transition duration-300">ผู้พัฒนา</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-purple-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute top-full left-0 w-full">
+            <a href="#about" class="block px-8 py-3 text-lg text-purple-700 hover:bg-purple-100 transition duration-300">เกี่ยวกับเว็บ</a>
+            <a href="#video" class="block px-8 py-3 text-lg text-purple-700 hover:bg-purple-100 transition duration-300">ตัวอย่าง</a>
+            <a href="#qr" class="block px-8 py-3 text-lg text-purple-700 hover:bg-purple-100 transition duration-300">QR Code</a>
+            <a href="#footer" class="block px-8 py-3 text-lg text-purple-700 hover:bg-purple-100 transition duration-300">ผู้พัฒนา</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- 2. About Section (Lorem Ipsum) -->
+        <section id="about" class="my-16 text-center">
+            <!-- This box will fade in -->
+            <div class="bg-white p-10 md:p-16 rounded-2xl shadow-pastel fade-in">
+                <h2 class="text-4xl font-bold text-purple-800 mb-6">Smart ID tag ทำงานอย่างไร?</h2>
+                <p class="text-lg text-purple-700 max-w-3xl mx-auto leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed metus ultrices, viverraS capien eget, commodoS Saugue. (ทำมาทำไม) Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                    <br><br>
+                    (ทำมาเพื่ออะไร) Proin egetS SaugueS Sfringilla. IntegerS Srhoncus,S SliberoS SquisS StinciduntS Stincidunt,S SaugueS SjustoS SpulvinarS Sante,S SvitaeS StristiqueS SfelisS SmetusS SatS Ssem. NullamS SefficiturS SconvallisS Sjusto,S SacS SsodalesS SlectusS ScongueS Snon.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Video Example Section (Updated for 2 videos) -->
+        <section id="video" class="my-24">
+            <!-- This box will fade in -->
+            <div class="bg-white p-10 md:p-16 rounded-2xl shadow-pastel fade-in">
+                <h2 class="text-4xl font-bold text-purple-800 mb-12 text-center">วีดีโอตัวอย่างการใช้งาน</h2> <!-- Increased bottom margin -->
+                
+                <!-- Main container for two videos -->
+                <div class="flex flex-col gap-16"> <!-- Added gap between video blocks -->
+    
+                    <!-- Video 1 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <!-- Video Placeholder -->
+                        <div class="w-full md:w-1/2 aspect-video bg-purple-100 rounded-lg flex items-center justify-center text-purple-500 shadow-inner">
+                            (พื้นที่สำหรับวีดีโอ 1)
+                        </div>
+                        <!-- Video Description -->
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-semibold text-purple-700 mb-3">1. การตั้งค่าและการติดตั้ง</h3>
+                            <p class="text-lg text-purple-700 leading-relaxed">
+                                ชมวีดีโอสาธิตวิธีการทำงานของ Smart ID tag ตั้งแต่การตั้งค่าครั้งแรก
+                            </p>
+                            <ul class="list-disc list-inside mt-4 space-y-2 text-lg text-purple-700">
+                                <li>การเชื่อมต่อ ID tag</li>
+                                <li>การตั้งค่าข้อมูลติดต่อฉุกเฉิน</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!-- Video 2 -->
+                    <div class="flex flex-col md:flex-row-reverse gap-8 items-center"> <!-- Added md:flex-row-reverse for variety -->
+                        <!-- Video Placeholder -->
+                        <div class="w-full md:w-1/2 aspect-video bg-purple-100 rounded-lg flex items-center justify-center text-purple-500 shadow-inner">
+                            (พื้นที่สำหรับวีดีโอ 2)
+                        </div>
+                        <!-- Video Description -->
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-semibold text-purple-700 mb-3">2. การติดตามและการแจ้งเตือน</h3>
+                            <p class="text-lg text-purple-700 leading-relaxed">
+                                ดูการทำงานจริงเมื่อสัตว์เลี้ยงของคุณออกนอกพื้นที่ที่กำหนด
+                            </p>
+                            <ul class="list-disc list-inside mt-4 space-y-2 text-lg text-purple-700">
+                                <li>การติดตามแบบ Real-time</li>
+                                <li>การแจ้งเตือนเมื่อหลุดหาย</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                </div> <!-- End of main video container -->
+            </div>
+        </section>
+
+        <!-- 4. QR Code Section -->
+        <section id="qr" class="my-24 text-center">
+            <!-- This box will fade in -->
+            <div class="bg-purple-600 p-10 md:p-16 rounded-2xl shadow-pastel fade-in text-white">
+                <h2 class="text-4xl font-bold mb-6">เชื่อมต่อเลย!</h2>
+                <p class="text-lg text-purple-100 max-w-xl mx-auto mb-8">
+                    สแกน QR Code ด้านล่างนี้เพื่อดาวน์โหลดแอปพลิเคชั่น หรือเชื่อมต่อไปยังหน้าที่เราเตรียมไว้สำหรับคุณ
+                </p>
+                <!-- QR Code Placeholder -->
+                <div class="w-56 h-56 bg-white p-4 rounded-lg mx-auto flex items-center justify-center shadow-lg">
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500">
+                        (พื้นที่สำหรับ QR Code)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. Footer -->
+    <footer id="footer" class="bg-purple-800 text-purple-200 p-10 mt-20">
+        <div class="container mx-auto text-center">
+            <p class="font-semibold text-lg">&copy; 2025 Smart ID tag</p>
+            <p class="mt-2">พัฒนาโดย: [ชื่อผู้พัฒนา/ทีม] | @Line: Smart ID Pet Tag Official</p>
+        </div>
+    </footer>
+
+    <!-- Load Custom JavaScript -->
+    <script src="script.js" defer></script>
+
+</body>
+</html>
